@@ -96,3 +96,18 @@ minSize: {
   style: 50000,
 }
 ```
+## Caching
+
+```js
+// 配置缓存
+cache: {
+  // 磁盘存储
+  type: "filesystem",
+  buildDependencies: {
+    // 当配置修改时，缓存失效
+    config: [__filename]
+  }
+}
+```
+
+缓存将存储到 `node_modules/.cache/webpack`
