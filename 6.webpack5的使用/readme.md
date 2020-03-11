@@ -24,3 +24,9 @@ webpack 5 会自动停止填充这些核心模块，并专注于与前端兼容�
 
 - 尽可能尝试使用与前端兼容的模块。
 - 可以为 node.js 核心模块手动添加一个 polyfill。错误消息将提示如何实现该目标。
+
+## Chunk 和模块 ID
+
+添加了用于长期缓存的新算法。在生产模式下默认情况下启用这些功能。
+
+`chunkIds: "deterministic", moduleIds: "deterministic"`
