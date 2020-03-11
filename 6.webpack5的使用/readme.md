@@ -30,3 +30,9 @@ webpack 5 会自动停止填充这些核心模块，并专注于与前端兼容�
 添加了用于长期缓存的新算法。在生产模式下默认情况下启用这些功能。
 
 `chunkIds: "deterministic", moduleIds: "deterministic"`
+
+## Chunk ID
+
+你可以不用使用 `import(/* webpackChunkName: "name" */ "module")` 在开发环境来为 chunk 命名，生产环境还是有必要的
+
+webpack 内部有 chunk 命名规则，不再是以 id(0, 1, 2)命名了
