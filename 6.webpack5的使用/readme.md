@@ -117,3 +117,8 @@ cache: {
 之前 webpack 总是在第一次构建时输出全部文件，但是监视重新构建时会只更新修改的文件。
 
 此次更新在第一次构建时会找到输出文件看是否有变化，从而决定要不要输出全部文件。
+## 默认值
+
+- `entry: "./src/index.js`
+- `output.path: path.resolve(__dirname, "dist")`
+- `output.filename: "[name].js"`
