@@ -11,3 +11,16 @@
 ## 下载
 
 - npm i webpack@next webpack-cli -D
+
+## 自动删除 Node.js Polyfills
+
+早期，webpack 的目标是允许在浏览器中运行大多数 node.js 模块，但是模块格局发生了变化，许多模块用途现在主要是为前端目的而编写的。webpack <= 4 附带了许多 node.js 核心模块的 polyfill，一旦模块使用任何核心模块（即 crypto 模块），这些模块就会自动应用。
+
+尽管这使使用为 node.js 编写的模块变得容易，但它会将这些巨大的 polyfill 添加到包中。在许多情况下，这些 polyfill 是不必要的。
+
+webpack 5 会自动停止填充这些核心模块，并专注于与前端兼容的模块。
+
+迁移：
+
+- 尽可能尝试使用与前端兼容的模块。
+- 可以为 node.js 核心模块手动添加一个 polyfill。错误消息将提示如何实现该目标。
