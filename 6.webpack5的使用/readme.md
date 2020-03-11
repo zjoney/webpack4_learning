@@ -56,3 +56,19 @@ console.log(module.inner.a);
 
 在生产环境中, inner 模块暴露的 `b` 会被删除
 
+2. webpack 现在能够多个模块之前的关系
+
+```js
+import { something } from './something';
+
+function usingSomething() {
+  return something;
+}
+
+export function test() {
+  return usingSomething();
+}
+```
+
+当设置了`"sideEffects": false`时，一旦发现`test`方法没有使用，不但删除`test`，还会删除`"./something"`
+
