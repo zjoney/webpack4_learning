@@ -122,3 +122,7 @@ cache: {
 - `entry: "./src/index.js`
 - `output.path: path.resolve(__dirname, "dist")`
 - `output.filename: "[name].js"`
+
+## 更多内容
+
+https://github.com/webpack/changelog-v5
