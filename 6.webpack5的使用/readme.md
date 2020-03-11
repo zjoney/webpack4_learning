@@ -81,3 +81,18 @@ webpack 5 开始新增一个属性 output.ecmaVersion, 可以生成 ES5 和 ES6 
 
 如：`output.ecmaVersion: 2015`
 
+
+## SplitChunk
+
+```js
+// webpack4
+minSize: 30000;
+```
+
+```js
+// webpack5
+minSize: {
+  javascript: 30000,
+  style: 50000,
+}
+```
