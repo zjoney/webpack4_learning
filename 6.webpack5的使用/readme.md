@@ -71,4 +71,13 @@ export function test() {
 ```
 
 当设置了`"sideEffects": false`时，一旦发现`test`方法没有使用，不但删除`test`，还会删除`"./something"`
+3. webpack 现在能处理对 Commonjs 的 tree shaking
+
+## Output
+
+webpack 4 默认只能输出 ES5 代码
+
+webpack 5 开始新增一个属性 output.ecmaVersion, 可以生成 ES5 和 ES6 / ES2015 代码.
+
+如：`output.ecmaVersion: 2015`
 
